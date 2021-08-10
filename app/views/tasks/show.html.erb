@@ -1,6 +1,9 @@
 <div class="container">
-  <h1><%= @task.title %></h1>
-  <div class="alert alert-secondary" role="alert">
+  <div class="d-flex justify-content-between mt-3">
+    <h1><%= @task.title %></h1>
+    <%= link_to 'Edit task', edit_path, :class => 'btn btn-primary' %>
+  </div>
+  <div class="alert alert-secondary mt-3" role="alert">
     <%= @task.details %>
   </div>
   <% if @task.completed %>
